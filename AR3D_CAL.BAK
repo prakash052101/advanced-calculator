@@ -1,0 +1,669 @@
+		       //AREA OF 3D FIGURES PROGRAMM.
+ class Area3D
+ {
+   private:
+    float radius,radius1,radius2,radius3,radius4,radius5,radius6,radius7,radius8,radius9;
+    float height,height1,height2,height3,height4,height5;
+    float slant_hght,slant_hght1,slant_hght2,slant_hght3;
+    float side,side1;
+    float length,length1;
+    float breadth,breadth1;
+    float r,r1,r2,r3,r4,r5,r6,r7,r8;
+    float csa_cylnd, csa_cone, csa_cube, csa_cuboid, csa_hemis, csa_sphere, csa_frustum;
+    float csa_hcylnd, osa_hsphere, ar_each_end_hcylnd;
+    float tsa_cylnd, tsa_cone, tsa_cube, tsa_cuboid, tsa_hemis, tsa_sphere, tsa_frustum;
+    float tsa_hcylnd;
+   public:
+    void csa_of_cylinder()
+    {
+	cout<<"\t\tRadius of Cylinder Entered Was:"<<radius<<endl;
+	cout<<"\t\tHeight of Cylinder Entered Was:"<<height<<endl;
+	cout<<"\t\tCurved Surface Area Of Cylinder is:"<<setprecision(4)<<csa_cylnd<<endl;
+	cout<<"\t\t---------------------------------------------"<<endl;
+    }
+    void tsa_of_cylinder()
+    {
+	cout<<"\t\tRadius of Cylinder Entered Was:"<<radius1<<endl;
+	cout<<"\t\tHeight of Cylinder Entered Was:"<<height1<<endl;
+	cout<<"\t\tTotal surface Area Of Cylinder is:"<<setprecision(4)<<tsa_cylnd<<endl;
+	cout<<"\t\t---------------------------------------------"<<endl;
+    }
+    void csa_of_hcylinder()
+    {
+	cout<<"\t\tLarger Radius of Hollow Cylinder Entered Was:"<<radius2<<endl;
+	cout<<"\t\tSmaller Radius of Hollow Cylinder Entered Was:"<<radius3<<endl;
+	cout<<"\t\tHeight of Hollow Cylinder Entered Was:"<<height2<<endl;
+	cout<<"\t\tCurved Surface Area Of Hollow Cylinder is:"<<setprecision(4)<<csa_hcylnd<<endl;
+	cout<<"\t\t------------------------------------------------------"<<endl;
+    }
+    void tsa_of_hcylinder()
+    {
+	cout<<"\t\tLarger Radius of Hollow cylinder Entered Was:"<<radius4<<endl;
+	cout<<"\t\tSmaller Radius of Hollow Cylinder Entered Was:"<<radius5<<endl;
+	cout<<"\t\tHeight of Hollow Cylinder Entered Was:"<<height3<<endl;
+	cout<<"\t\tTotal Surface Area Of Hollow Cylinder is:"<<setprecision(4)<<tsa_hcylnd<<endl;
+	cout<<"\t\t-----------------------------------------------------"<<endl;
+    }
+    void ar_each_end_hcylinder()
+    {
+	cout<<"\t\tLarger Radius of Hollow Cylinder Entered Was:"<<radius6<<endl;
+	cout<<"\t\tSmaller Radius of Hollow Cylinder Entered Was:"<<radius7<<endl;
+	cout<<"\t\tArea of Each End Of Hollow Cylinder is:"<<setprecision(4)<<ar_each_end_hcylnd<<endl;
+	cout<<"\t\t-----------------------------------------------------------"<<endl;
+    }
+    void csa_of_cone()
+    {
+	cout<<"\t\tRadius of Cone Entered Was:"<<radius8<<endl;
+	cout<<"\t\tSlant Height of Cone Entered Was:"<<slant_hght<<endl;
+	cout<<"\t\tCurved Surface Area Of Cone is:"<<setprecision(4)<<csa_cone<<endl;
+	cout<<"\t\t------------------------------------------------------"<<endl;
+    }
+    void tsa_of_cone()
+    {
+	cout<<"\t\tRadius of Cone Entered Was:"<<radius9<<endl;
+	cout<<"\t\tSlant Height of Cone Entered Was:"<<slant_hght1<<endl;
+	cout<<"\t\tTotal Surface Area Of Cone is:"<<setprecision(4)<<tsa_cone<<endl;
+	cout<<"\t\t------------------------------------------------------"<<endl;
+    }
+    void csa_of_cube()
+    {
+	cout<<"\t\tLength of Side of Cube Entered Was:"<<side<<endl;
+	cout<<"\t\tCurved Surface Area Of Cube is:"<<setprecision(4)<<csa_cube<<endl;
+	cout<<"\t\t-----------------------------------------"<<endl;
+    }
+    void tsa_of_cube()
+    {
+	cout<<"\t\tLength of Side of Cube Entered Was:"<<side1<<endl;
+	cout<<"\t\tTotal Surface Area Of Cube is:"<<setprecision(4)<<tsa_cube<<endl;
+	cout<<"\t\t-----------------------------------------"<<endl;
+    }
+    void csa_of_cuboid()
+    {
+	cout<<"\t\tLenth of Cubiod Entered Was:"<<length<<endl;
+	cout<<"\t\tBreadth Of Cubiod Enetered Was:"<<breadth<<endl;
+	cout<<"\t\tHeight of Cuboid Entered Was:"<<height4<<endl;
+	cout<<"\t\tCurved Surface Area of Cubiod is:"<<setprecision(4)<<csa_cuboid<<endl;
+	cout<<"\t\t-----------------------------------------"<<endl;
+    }
+    void tsa_of_cuboid()
+    {
+	cout<<"\t\tLenth of Cubiod Entered Was:"<<length1<<endl;
+	cout<<"\t\tBreadth of Cubiod Enetered Was:"<<breadth1<<endl;
+	cout<<"\t\tHeight of Cubiod Entered Was:"<<height5<<endl;
+	cout<<"\t\tTotal Surface Area Of Cuboid is:"<<setprecision(4)<<tsa_cuboid<<endl;
+	cout<<"\t\t--------------------------------------------"<<endl;
+    }
+    void csa_of_hemisphere()
+    {
+	cout<<"\t\tRadius of Hemisphere Entered Was:"<<r<<endl;
+	cout<<"\t\tCurved Surface Area of Hemisphere is:"<<setprecision(4)<<csa_hemis<<endl;
+	cout<<"\t\t-----------------------------------------------"<<endl;
+    }
+    void tsa_of_hemisphere()
+    {
+	cout<<"\t\tRadius of Hemisphere Entered Was:"<<r1<<endl;
+	cout<<"\t\tTotal Surface Area of Hemisphere is:"<<setprecision(4)<<tsa_hemis<<endl;
+	cout<<"\t\t-----------------------------------------------"<<endl;
+    }
+    void csa_of_sphere()
+    {
+	cout<<"\t\tRadius of Sphere Entered Was:"<<r2<<endl;
+	cout<<"\t\tCurved Surface Area of Sphere is:"<<setprecision(4)<<csa_sphere<<endl;
+	cout<<"\t\t-------------------------------------------"<<endl;
+    }
+    void tsa_of_sphere()
+    {
+	cout<<"\t\tRadius of Sphere Entered Was:"<<r3<<endl;
+	cout<<"\t\tTotal Surface Area of Sphere is:"<<setprecision(4)<<tsa_sphere<<endl;
+	cout<<"\t\t--------------------------------------------"<<endl;
+    }
+    void osa_of_hsphere()
+    {
+	cout<<"\t\tRadius of hollow Sphere Entered Was:"<<r4<<endl;
+	cout<<"\t\tOuter Surface Area Of Hollow Sphere is:"<<setprecision(4)<<osa_hsphere<<endl;
+	cout<<"\t\t--------------------------------------------------"<<endl;
+    }
+    void csa_of_frustum()
+    {
+	cout<<"\t\tLarger Radius of Frustum Entered Was:"<<r5<<endl;
+	cout<<"\t\tSmaller Radius of Frustum Entered Was:"<<r6<<endl;
+	cout<<"\t\tSlant Height of Frustum Entered Was:"<<slant_hght2<<endl;
+	cout<<"\t\tCurved Surface Area Of Frustum is:"<<setprecision(4)<<csa_frustum<<endl;
+	cout<<"\t\t------------------------------------------------"<<endl;
+    }
+    void tsa_of_frustum()
+    {
+	cout<<"\t\tLarger Radius of Frustum Entered Was:"<<r7<<endl;
+	cout<<"\t\tSmaller Radius of Frustum Entered Was:"<<r8<<endl;
+	cout<<"\t\tSlant Height of Frustum Entered Was:"<<slant_hght3<<endl;
+	cout<<"\t\tTotal Surface Area Of Frustum is:"<<setprecision(4)<<tsa_frustum<<endl;
+	cout<<"\t\t------------------------------------------------"<<endl;
+    }
+    void CSA_of_Cylinder();
+    void TSA_of_Cylinder();
+    void CSA_of_HCylinder();
+    void TSA_of_HCylinder();
+    void Ar_Each_End_HCylinder();
+    void CSA_of_Cone();
+    void TSA_of_Cone();
+    void CSA_of_Cube();
+    void TSA_of_Cube();
+    void CSA_of_Cuboid();
+    void TSA_of_Cuboid();
+    void CSA_of_Hemisphere();
+    void TSA_of_Hemisphere();
+    void CSA_of_Sphere();
+    void TSA_of_Sphere();
+    void OSA_of_HSphere();
+    void CSA_of_Frustum();
+    void TSA_of_Frustum();
+ }a2;
+ void History_Areaof_3D()
+ {
+	ifstream fig("Area3D.dat",ios::in|ios::binary);
+	while(fig.read((char*)&a2,sizeof(a2)))
+	{
+	 a2.csa_of_cylinder();
+	 getch();
+	}
+	fig.close();
+	ifstream fig1("Area3D1.dat",ios::in|ios::binary);
+	while(fig1.read((char*)&a2,sizeof(a2)))
+	{
+	 a2.tsa_of_cylinder();
+	 getch();
+	}
+	fig1.close();
+	ifstream fig2("Area3D2.dat",ios::in|ios::binary);
+	while(fig2.read((char*)&a2,sizeof(a2)))
+	{
+	 a2.csa_of_hcylinder();
+	 getch();
+	}
+	fig2.close();
+	ifstream fig3("Area3D3.dat",ios::in|ios::binary);
+	while(fig3.read((char*)&a2,sizeof(a2)))
+	{
+	 a2.tsa_of_hcylinder();
+	 getch();
+	}
+	fig3.close();
+	ifstream fig4("Area3D4.dat",ios::in|ios::binary);
+	while(fig4.read((char*)&a2,sizeof(a2)))
+	{
+	 a2.ar_each_end_hcylinder();
+	 getch();
+	}
+	fig4.close();
+	ifstream fig5("Area3D5.dat",ios::in|ios::binary);
+	while(fig5.read((char*)&a2,sizeof(a2)))
+	{
+	 a2.csa_of_cone();
+	 getch();
+	}
+	fig5.close();
+	ifstream fig6("Area3D6.dat",ios::in|ios::binary);
+	while(fig6.read((char*)&a2,sizeof(a2)))
+	{
+	 a2.tsa_of_cone();
+	 getch();
+	}
+	fig6.close();
+	ifstream fig7("Area3D7.dat",ios::in|ios::binary);
+	while(fig7.read((char*)&a2,sizeof(a2)))
+	{
+	 a2.csa_of_cube();
+	 getch();
+	}
+	fig7.close();
+	ifstream fig8("Area3D8.dat",ios::in|ios::binary);
+	while(fig.read((char*)&a2,sizeof(a2)))
+	{
+	 a2.tsa_of_cube();
+	 getch();
+	}
+	fig8.close();
+	ifstream fig9("Area3D9.dat",ios::in|ios::binary);
+	while(fig.read((char*)&a2,sizeof(a2)))
+	{
+	 a2.csa_of_cuboid();
+	 getch();
+	}
+	fig9.close();
+	ifstream fig10("Area3D10.dat",ios::in|ios::binary);
+	while(fig10.read((char*)&a2,sizeof(a2)))
+	{
+	 a2.tsa_of_cuboid();
+	 getch();
+	}
+	fig10.close();
+	ifstream fig11("Area3D11.dat",ios::in|ios::binary);
+	while(fig11.read((char*)&a2,sizeof(a2)))
+	{
+	 a2.csa_of_hemisphere();
+	 getch();
+	}
+	fig11.close();
+	ifstream fig12("Area3D12.dat",ios::in|ios::binary);
+	while(fig12.read((char*)&a2,sizeof(a2)))
+	{
+	 a2.tsa_of_hemisphere();
+	 getch();
+	}
+	fig12.close();
+	ifstream fig13("Area3D13.dat",ios::in|ios::binary);
+	while(fig13.read((char*)&a2,sizeof(a2)))
+	{
+	 a2.csa_of_sphere();
+	 getch();
+	}
+	fig13.close();
+	ifstream fig14("Area3D14.dat",ios::in|ios::binary);
+	while(fig14.read((char*)&a2,sizeof(a2)))
+	{
+	 a2.tsa_of_sphere();
+	 getch();
+	}
+	fig14.close();
+	ifstream fig15("Area3D15.dat",ios::in|ios::binary);
+	while(fig15.read((char*)&a2,sizeof(a2)))
+	{
+	 a2.osa_of_hsphere();
+	 getch();
+	}
+	fig15.close();
+	ifstream fig16("Area3D16.dat",ios::in|ios::binary);
+	while(fig16.read((char*)&a2,sizeof(a2)))
+	{
+	 a2.csa_of_frustum();
+	 getch();
+	}
+	fig16.close();
+	ifstream fig17("Area3D17.dat",ios::in|ios::binary);
+	while(fig17.read((char*)&a2,sizeof(a2)))
+	{
+	 a2.tsa_of_frustum();
+	 getch();
+	}
+	fig17.close();
+ }
+ void Clear_Areaof_3d_History()
+ {
+	remove("Area3D.dat");
+	remove("Area3D1.dat");
+	remove("Area3D2.dat");
+	remove("Area3D3.dat");
+	remove("Area3D4.dat");
+	remove("Area3D5.dat");
+	remove("Area3D6.dat");
+	remove("Area3D7.dat");
+	remove("Area3D8.dat");
+	remove("Area3D9.dat");
+	remove("Area3D10.dat");
+	remove("Area3D11.dat");
+	remove("Area3D12.dat");
+	remove("Area3D13.dat");
+	remove("Area3D14.dat");
+	remove("Area3D15.dat");
+	remove("Area3D16.dat");
+	remove("Area3D17.dat");
+ }
+ void Area3D::CSA_of_Cylinder()
+ {
+	ofstream fig("Area3d.dat",ios::app|ios::binary);
+	do
+	{
+		cout<<"\n\t#\t   Welcome To Finding CSA of Cylinder Programm.      #"<<endl;
+		cout<<"=============================================================================="<<endl;
+		cout<<"\t\tEnter The Radius Of Cylinder:\n\t\t\t";
+		cin>>radius;
+		cout<<"\t\tEnter The Height Of Cylinder:\n\t\t\t";
+		cin>>height;
+		csa_cylnd=2*pi*radius*height;
+		csa_of_cylinder();
+		fig.write((char*)&a2,sizeof(a2));
+		cout<<"\tQ.\tWish To Continue In Finding CSA Of Cylinder Program(y/n):";
+		cin>>ans;
+		clrscr();
+	}while(ans=='y'||ans=='Y');
+	fig.close();
+ }
+ void Area3D::TSA_of_Cylinder()
+ {
+	ofstream fig1("Area3d1.dat",ios::app|ios::binary);
+	do
+	{
+		cout<<"\n\t#\t   Welcome To Finding TSA of Cylinder Programm.      #"<<endl;
+		cout<<"=============================================================================="<<endl;
+		cout<<"\t\tEnter The Radius Of Cylinder:\n\t\t\t";
+		cin>>radius1;
+		cout<<"\t\tEnter The Height of Cylinder:\n\t\t\t";
+		cin>>height1;
+		tsa_cylnd=2*pi*radius1*(radius1+height1);
+		tsa_of_cylinder();
+		fig1.write((char*)&a2,sizeof(a2));
+		cout<<"\tQ.\tWish To Continue In Finding TSA Of Cylinder Program(y/n):";
+		cin>>ans;
+		clrscr();
+	}while(ans=='y'||ans=='Y');
+	fig1.close();
+ }
+ void Area3D::CSA_of_HCylinder()
+ {
+	ofstream fig2("Area3d2.dat",ios::app|ios::binary);
+	do
+	{
+		cout<<"\n\t#\t   Welcome To Finding CSA of Hollow Cylinder Programm.      #"<<endl;
+		cout<<"==============================================================================="<<endl;
+		cout<<"\t\tEnter The Larger Radius Of Hollow Cylinder:\n\t\t\t\t";
+		cin>>radius2;
+		cout<<"\t\tEnter The Smaller Radius Of Hollow Cylinder:\n\t\t\t\t";
+		cin>>radius3;
+		cout<<"\t\tEnter Height of The Hollow Cylinder:\n\t\t\t\t";
+		cin>>height2;
+		csa_hcylnd=2*pi*height2*(radius2+radius3);
+		csa_of_hcylinder();
+		fig2.write((char*)&a2,sizeof(a2));
+		cout<<"\tQ.\tWish To Continue In Finding CSA Of HCylinder Program(y/n):";
+		cin>>ans;
+		clrscr();
+	}while(ans=='y'||ans=='Y');
+	fig2.close();
+ }
+ void Area3D::TSA_of_HCylinder()
+ {
+	ofstream fig3("Area3d3.dat",ios::app|ios::binary);
+	do
+	{
+		cout<<"\n\t#\tWelcome To Finding TSA of Hollow Cylinder Programm.  #"<<endl;
+		cout<<"============================================================================="<<endl;
+		cout<<"\t\tEnter The Larger Radius Of Hollow Cylinder:\n\t\t\t\t";
+		cin>>radius4;
+		cout<<"\t\tEnter The Smaller Radius Of Hollow Cylinder:\n\t\t\t\t";
+		cin>>radius5;
+		cout<<"\t\tEnter Height of The Hollow Cylinder:\n\t\t\t\t";
+		cin>>height3;
+		tsa_hcylnd=2*pi*((radius4+radius5)*((height+radius4)-radius5));
+		tsa_of_hcylinder();
+		fig3.write((char*)&a2,sizeof(a2));
+		cout<<"\tQ.Wish To Continue In Finding TSA Of HCylinder Program(y/n):";
+		cin>>ans;
+		clrscr();
+	}while(ans=='y'||ans=='Y');
+	fig3.close();
+ }
+ void Area3D::Ar_Each_End_HCylinder()
+ {
+	ofstream fig4("Area3d4.dat",ios::app|ios::binary);
+	do
+	{
+		cout<<"\n\t#.Welcome To Finding Area of Each End Of Hollow Cylinder Programm.#"<<endl;
+		cout<<"=============================================================================="<<endl;
+		cout<<"\t\tEnter The Larger Radius Of Hollow Cylinder:\n\t\t\t\t";
+		cin>>radius6;
+		cout<<"\t\tEnter The Smaller Radius of Hollow Cylinder:\n\t\t\t\t";
+		cin>>radius7;
+		ar_each_end_hcylnd=pi*(radius6*radius6-radius7*radius7);
+		ar_each_end_hcylinder();
+		fig4.write((char*)&a2,sizeof(a2));
+		cout<<"     Q.Wish To Continue In Finding Area Of Each End Of HCylinder Program(y/n):";
+		cin>>ans;
+		clrscr();
+	}while(ans=='y'||ans=='Y');
+	fig4.close();
+ }
+
+ void Area3D::CSA_of_Cone()
+ {
+	ofstream fig5("Area3d5.dat",ios::app|ios::binary);
+	do
+	{
+		cout<<"\n\t#\t   Welcome To Finding CSA of Cone Programm.      #"<<endl;
+		cout<<"=============================================================================="<<endl;
+		cout<<"\t\tEnter The Radius Of Cone:\n\t\t\t";
+		cin>>radius8;
+		cout<<"\t\tEnter The Slant Height Of Cone:\n\t\t\t";
+		cin>>slant_hght;
+		csa_cone=pi*radius8*slant_hght;
+		csa_of_cone();
+		fig5.write((char*)&a2,sizeof(a2));
+		cout<<"\tQ.\tWish To Continue In Finding CSA Of Cone Program(y/n):";
+		cin>>ans;
+		clrscr();
+	}while(ans=='y'||ans=='Y');
+	fig5.close();
+ }
+ void Area3D::TSA_of_Cone()
+ {
+	ofstream fig6("Area3d6.dat",ios::app|ios::binary);
+	do
+	{
+		cout<<"\n\t#\t   Welcome To Finding TSA of Cone Programm.      #"<<endl;
+		cout<<"=============================================================================="<<endl;
+		cout<<"\t\tEnter The Radius Of Cone:\n\t\t\t";
+		cin>>radius9;
+		cout<<"\t\tEnter The Slant Height Of The Cone:\n\t\t\t";
+		cin>>slant_hght1;
+		tsa_cone=pi*radius9*(slant_hght1+radius9);
+		tsa_of_cone();
+		fig6.write((char*)&a2,sizeof(a2));
+		cout<<"\tQ.\tWish To Continue In Finding TSA Of Cone Program(y/n):";
+		cin>>ans;
+		clrscr();
+	}while(ans=='y'||ans=='Y');
+	fig6.close();
+ }
+ void Area3D::CSA_of_Cube()
+ {
+	ofstream fig7("Area3d7.dat",ios::app|ios::binary);
+	do
+	{
+		cout<<"\n\t#\t   Welcome To Finding CSA of Cube Programm.      #"<<endl;
+		cout<<"=============================================================================="<<endl;
+		cout<<"\t\tEnter The Length Of Side Of Cube:\n\t\t\t";
+		cin>>side;
+		csa_cube=4*(side*side);
+		csa_of_cube();
+		fig7.write((char*)&a2,sizeof(a2));
+		cout<<"\tQ.\tWish To Continue In Finding CSA Of Cube Program(y/n):";
+		cin>>ans;
+		clrscr();
+	}while(ans=='y'||ans=='Y');
+	fig7.close();
+ }
+ void Area3D::TSA_of_Cube()
+ {
+	ofstream fig8("Area3d8.dat",ios::app|ios::binary);
+	do
+	{
+		cout<<"\n\t#\t   Welcome To Finding TSA of Cube Programm.      #"<<endl;
+		cout<<"=============================================================================="<<endl;
+		cout<<"\t\tEnter The Length Of Side Of Cube:\n\t\t\t";
+		cin>>side1;
+		tsa_cube=6*(side1*side1);
+		tsa_of_cube();
+		fig8.write((char*)&a2,sizeof(a2));
+		cout<<"\tQ.\tWish To Continue In Finding TSA Of Cube Program(y/n):";
+		cin>>ans;
+		clrscr();
+	}while(ans=='y'||ans=='Y');
+	fig8.close();
+ }
+ void Area3D::CSA_of_Cuboid()
+ {
+	ofstream fig9("Area3d9.dat",ios::app|ios::binary);
+	do
+	{
+		cout<<"\n\t#\t   Welcome To Finding CSA of Cuboid Programm.      #"<<endl;
+		cout<<"=============================================================================="<<endl;
+		cout<<"\t\tEnter The Length Of Cuboid:\n\t\t\t";
+		cin>>length;
+		cout<<"\t\tEnter The Breadth Of Cuboid:\n\t\t\t";
+		cin>>breadth;
+		cout<<"\t\tEnter The Height Of Cuboid:\n\t\t\t";
+		cin>>height4;
+		csa_cuboid=2*height4*(length+breadth);
+		csa_of_cuboid();
+		fig9.write((char*)&a2,sizeof(a2));
+		cout<<"\tQ.\tWish To Continue In Finding CSA Of Cuboid Program(y/n):";
+		cin>>ans;
+		clrscr();
+	}while(ans=='y'||ans=='Y');
+	fig9.close();
+ }
+ void Area3D::TSA_of_Cuboid()
+ {
+	ofstream fig10("Area3d10.dat",ios::app|ios::binary);
+	do
+	{
+		cout<<"\n\t#\t   Welcome To Finding TSA of Cuboid Programm.      #"<<endl;
+		cout<<"=============================================================================="<<endl;
+		cout<<"\t\tEnter The Length Of Cuboid:\n\t\t\t";
+		cin>>length1;
+		cout<<"\t\tEnter The Breadth Of Cuboid:\n\t\t\t";
+		cin>>breadth1;
+		cout<<"\t\tEnter The Height Of Cuboid:\n\t\t\t";
+		cin>>height5;
+		tsa_cuboid=2*((length1*breadth1)+(breadth1*height5)+(height5*length1));
+		tsa_of_cuboid();
+		fig10.write((char*)&a2,sizeof(a2));
+		cout<<"\tQ.\tWish To Continue In Finding TSA Of Cuboid Program(y/n):";
+		cin>>ans;
+		clrscr();
+	}while(ans=='y'||ans=='Y');
+	fig10.close();
+ }
+ void Area3D::CSA_of_Hemisphere()
+ {
+	ofstream fig11("Area3d11.dat",ios::app|ios::binary);
+	do
+	{
+		cout<<"\n\t#\t   Welcome to Finding CSA Of Hemisphere programm.      #"<<endl;
+		cout<<"=============================================================================="<<endl;
+		cout<<"\t\tEnter The Radius Of Hemisphere:\n\t\t\t\t";
+		cin>>r;
+		csa_hemis=2*pi*(r*r);
+		csa_of_hemisphere();
+		fig11.write((char*)&a2,sizeof(a2));
+		cout<<"\tQ.\tWish To Continue in Finding CSA of Hemisphere Program(y/n):";
+		cin>>ans;
+		clrscr();
+	}while(ans=='y'||ans=='Y');
+	fig11.close();
+ }
+ void Area3D::TSA_of_Hemisphere()
+ {
+	ofstream fig12("Area3d12.dat",ios::app|ios::binary);
+	do
+	{
+		cout<<"\n\t#\t   Welcome to Finding TSA Of Hemisphere programm.      #"<<endl;
+		cout<<"=============================================================================="<<endl;
+		cout<<"\t\tEnter The Radius Of Hemisphere:\n\t\t\t\t";
+		cin>>r1;
+		tsa_hemis=3*pi*(r1*r1);
+		tsa_of_hemisphere();
+		fig12.write((char*)&a2,sizeof(a2));
+		cout<<"\tQ.\tWish To Continue in Finding TSA of Hemisphere Program(y/n):";
+		cin>>ans;
+		clrscr();
+	}while(ans=='y'||ans=='Y');
+	fig12.close();
+ }
+ void Area3D::CSA_of_Sphere()
+ {
+	ofstream fig13("Area3d13.dat",ios::app|ios::binary);
+	do
+	{
+		cout<<"\n\t#\t   Welcome to Finding CSA Of Sphere Programm.      #"<<endl;
+		cout<<"=============================================================================="<<endl;
+		cout<<"\t\tEnter The Radius Of Sphere:\n\t\t\t";
+		cin>>r2;
+		csa_sphere=4*pi*(r2*r2);
+		csa_of_sphere();
+		fig13.write((char*)&a2,sizeof(a2));
+		cout<<"\tQ.\tWish To Continue in Finding CSA of Sphere Program(y/n):";
+		cin>>ans;
+		clrscr();
+	}while(ans=='y'||ans=='Y');
+	fig13.close();
+ }
+ void Area3D::TSA_of_Sphere()
+ {
+	ofstream fig14("Area3d14.dat",ios::app|ios::binary);
+	do
+	{
+		cout<<"\n\t#\t   Welcome to Finding TSA Of Sphere Programm.      #"<<endl;
+		cout<<"=============================================================================="<<endl;
+		cout<<"\t\tEnter The Radius Of Sphere:\n\t\t\t";
+		cin>>r3;
+		tsa_sphere=4*pi*(r3*r3);
+		tsa_of_sphere();
+		fig14.write((char*)&a2,sizeof(a2));
+		cout<<"\tQ.\tWish To Continue in Finding TSA of Sphere Program(y/n):";
+		cin>>ans;
+		clrscr();
+	}while(ans=='y'||ans=='Y');
+	fig14.close();
+ }
+ void Area3D::OSA_of_HSphere()
+ {
+	ofstream fig15("Area3d15.dat",ios::app|ios::binary);
+	do
+	{
+		cout<<"\n\t#\tWelcome to Finding Outer surface Area Of HSphere Programm. #"<<endl;
+		cout<<"=============================================================================="<<endl;
+		cout<<"\t\tEnter The Outer Radius Of HSphere:\n\t\t\t\t";
+		cin>>r4;
+		osa_hsphere=4*pi*(r4*r4);
+		osa_of_hsphere();
+		fig15.write((char*)&a2,sizeof(a2));
+		cout<<"\tQ.\tWish To Continue in Finding OSA of Sphere Program(y/n):";
+		cin>>ans;
+		clrscr();
+	}while(ans=='y'||ans=='Y');
+	fig15.close();
+ }
+ void Area3D::CSA_of_Frustum()
+ {
+	ofstream fig16("Area3d16.dat",ios::app|ios::binary);
+	do
+	{
+		cout<<"\n\t#\t   Welcome To Finding CSA of Frustum Programm.      #"<<endl;
+		cout<<"=============================================================================="<<endl;
+		cout<<"\t\tEnter The Larger Radius Of Frustum:\n\t\t\t\t";
+		cin>>r5;
+		cout<<"\t\tEnter The Smaller Radius Of Frustum:\n\t\t\t\t";
+		cin>>r6;
+		cout<<"\t\tEnter the Slant Height Of Frustum:\n\t\t\t\t";
+		cin>>slant_hght2;
+		csa_frustum=pi*(r5+r6)*slant_hght2;
+		csa_of_frustum();
+		fig16.write((char*)&a2,sizeof(a2));
+		cout<<"\tQ.\tWish To Continue In Finding CSA Of Frustum Program(y/n):";
+		cin>>ans;
+		clrscr();
+	}while(ans=='y'||ans=='Y');
+	fig16.close();
+ }
+ void Area3D::TSA_of_Frustum()
+ {
+	ofstream fig17("Area3d17.dat",ios::app|ios::binary);
+	do
+	{
+		cout<<"\n\t#\t   Welcome To Finding TSA of Frustum Programm.      #"<<endl;
+		cout<<"=============================================================================="<<endl;
+		cout<<"\t\tEnter The Larger Radius Of Frustum:\n\t\t\t\t";
+		cin>>r7;
+		cout<<"\t\tEnter The Smaller Radius Of Frustum:\n\t\t\t\t";
+		cin>>r8;
+		cout<<"\t\tEnter Slant Height of Frustum:\n\t\t\t\t";
+		cin>>slant_hght3;
+		tsa_frustum=pi*(((r7+r8)*slant_hght3)+(r7*r7)+(r8*r8));
+		tsa_of_frustum();
+		fig17.write((char*)&a2,sizeof(a2));
+		cout<<"\tQ.\tWish To Continue In Finding TSA Of Frustum Program(y/n):";
+		cin>>ans;
+		clrscr();
+	}while(ans=='y'||ans=='Y');
+	fig17.close();
+ }

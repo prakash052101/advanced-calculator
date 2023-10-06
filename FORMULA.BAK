@@ -1,0 +1,99 @@
+			   //FORMULA PROGRAMM
+ class Formula
+ {
+  private:
+   int forno;
+   char a[100];
+  public:
+   void Enter()
+   {
+    cout<<"\n\t\tEnter Formula Number:";
+    cin>>forno;
+    cout<<"\t\tEnter Formula:\n\t\t\t";
+    gets(a);
+   }
+   void Display()
+   {
+    cout<<forno<<".";
+    puts(a);
+   }
+   int retfono()
+   {
+    return forno;
+   }
+ }f1;
+ void Enter1()
+ {
+   ofstream fout("Formula.dat",ios::app|ios::binary);
+   char ans='y';
+   do
+   {
+    f1.Enter();
+    fout.write((char*)&f1,sizeof(f1));
+    cout<<"\t\tWish To Add More Formula(y/n):";
+    cin>>ans;
+    clrscr();
+   }while((ans=='y')||(ans=='Y'));
+   fout.close();
+ }
+ void Display1()
+ {
+   ifstream fin("Formula.dat",ios::in|ios::binary);
+   while(fin.read((char*)&f1,sizeof(f1)))
+   {
+    f1.Display();
+   }
+   fin.close();
+ }
+ void Del()
+ {
+  ifstream fin("Formula.dat",ios::in|ios::binary);
+  ofstream fout1("new.dat",ios::app|ios::binary);
+  int fo_no;
+  cout<<"\tEnter Formula Number To be Deleted:";
+  cin>>fo_no;
+  while(fin.read((char*)&f1,sizeof(f1)))
+  {
+   if(f1.retfono()!=fo_no)
+   fout1.write((char*)&f1,sizeof(f1));
+  }
+  fout1.close();
+  fin.close();
+  remove("Formula.dat");
+  rename("new.dat","Formula.dat");
+  cout<<"\n\t\tFormula Left After Deletion is:"<<endl;
+  ifstream fin1("Formula.dat",ios::in|ios::binary);
+  while(fin1.read((char*)&f1,sizeof(f1)))
+  {
+   f1.Display();
+  }
+  fin1.close();
+ }
+ void Modify()
+ {
+  int fn;
+  cout<<"\tEnter The Formula Number To Be Modified: ";
+  cin>>fn;
+  fstream fin("Formula.dat", ios::in|ios::binary|ios::out);
+  if(!fin)
+  {
+   cout<<"No file"<<endl;
+   exit(0);
+  }
+  while(fin.read((char*)&f1,sizeof(f1)))
+  {
+   if(f1.retfono()==fn)
+   {
+    int pos=0;
+    cout<<"\t\t   Old Formula Entered Was:"<<endl;
+    pos=fin.tellg()-sizeof(f1);
+    f1.Display();
+    cout<<"\t\t   Now Enter New Formula:"<<endl;
+    f1.Enter();
+    fin.seekp(pos);
+    fin.write((char *)&f1, sizeof(f1));
+    break;
+   }
+  }
+  fin.close();
+ }
